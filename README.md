@@ -1,7 +1,9 @@
-drf-ujson-renderer
+Django Rest Framework UJSON Renderer
 ==================
 
-Django Rest Framework renderer using ujson
+[![Build Status](https://travis-ci.org/gizmag/drf-ujson-renderer.png?branch=master)](https://travis-ci.org/gizmag/drf-ujson-renderer)
+
+Django Rest Framework renderer using [ujson](https://github.com/esnme/ultrajson)
 
 ## Installation
 
@@ -9,8 +11,7 @@ Django Rest Framework renderer using ujson
 
 
 ## Benchmarks
-This is on average 2.3x faster than the default JSON Serializer, you can see the
-benchmark results below. For us the speed improvement is negligable.
+This is on average 2.3x faster than the default JSON Serializer.
 
 ```python
 import timeit
