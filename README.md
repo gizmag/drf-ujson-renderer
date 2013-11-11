@@ -3,6 +3,10 @@ drf-ujson-renderer
 
 Django Rest Framework renderer using ujson
 
+## Installation
+
+`pip install drf_ujson`
+
 
 ## Benchmarks
 This is on average 2.3x faster than the default JSON Serializer, you can see the
