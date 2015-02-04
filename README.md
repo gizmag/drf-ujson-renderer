@@ -20,6 +20,17 @@ REST_FRAMEWORK = {
 }
 ```
 
+Also you can set the `UJSONParser` class as your default parser in your `settings.py`
+
+```python
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': (
+        'drf_ujson.parsers.UJSONParser',
+    ),
+    ...
+}
+```
+
 ## Benchmarks
 This is on average 2.3x faster than the default JSON Serializer.
 
