@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='drf_ujson',
-    version='1.1',
+    version='1.2',
     description='Django Rest Framework UJSON Renderer',
     author='Gizmag',
     author_email='tech@gizmag.com',
