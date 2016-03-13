@@ -32,7 +32,7 @@ class UJSONRendererTests(TestCase):
 
         rendered = self.renderer.render(
             data=self.data,
-            media_type='application/json',
+            accepted_media_type='application/json',
             renderer_context={},
         )
         reloaded = ujson.loads(rendered)

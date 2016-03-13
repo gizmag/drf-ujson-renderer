@@ -10,5 +10,5 @@ setup(
     author_email='tech@gizmag.com',
     url='https://github.com/gizmag/drf-ujson-renderer',
     packages=find_packages(),
-    install_requires=['django', 'ujson', 'djangorestframework']
+    install_requires=['django', 'ujson>=1.35', 'djangorestframework']
 )
