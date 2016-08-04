@@ -1,8 +1,20 @@
 language: python
+
+sudo: false
+
 python:
-  - "2.7"
-  - "3.3"
+  - "3.5"
+
+env:
+    - TOX_ENV=py27
+    - TOX_ENV=py32
+    - TOX_ENV=py33
+    - TOX_ENV=py34
+    - TOX_ENV=py35
+
 install:
-  - pip install -r test_requirements.txt
-  - pip install . --use-mirrors
-script: nosetests
+    # Virtualenv < 14 is required to keep the Python 3.2 builds running.
+    - pip install tox "virtualenv<14"
+
+script:
+    - tox -e $TOX_ENV
