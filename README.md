@@ -9,27 +9,23 @@ Django Rest Framework renderer using [ujson](https://github.com/esnme/ultrajson)
 
 `pip install drf_ujson`
 
-You can then set the `UJSONRenderer` class as your default renderer in your `settings.py`
+You can then set the `UJSONRenderer` and `UJSONParser` classes as your default in your `settings.py`
 
 ```python
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'drf_ujson.renderers.UJSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
     ),
-    ...
-}
-```
-
-Also you can set the `UJSONParser` class as your default parser in your `settings.py`
-
-```python
-REST_FRAMEWORK = {
     'DEFAULT_PARSER_CLASSES': (
         'drf_ujson.parsers.UJSONParser',
+         'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser',
     ),
     ...
 }
 ```
+
 
 ## Benchmarks
 This is on average 2.3x faster than the default JSON Serializer.
