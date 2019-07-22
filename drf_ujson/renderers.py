@@ -21,4 +21,6 @@ class UJSONRenderer(BaseRenderer):
             return bytes()
 
         ret = ujson.dumps(data, ensure_ascii=self.ensure_ascii)
+        if isinstance(ret, str):
+            return bytes(ret.encode('utf-8'))
         return ret
