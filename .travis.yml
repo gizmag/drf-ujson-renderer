@@ -3,5 +3,5 @@ python:
   - "3.8"
 install:
   - pip install -r test_requirements.txt
-  - pip install . --use-mirrors
+  - pip install .
 script: nosetests
